@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+importation of important modules
+"""
 import json
 import requests
 

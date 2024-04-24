@@ -5,6 +5,7 @@ importation of important modules
 import json
 import requests
 
+
 def fetch_user_data():
     """
     fetch information and to-do list of all employees
@@ -23,12 +24,13 @@ def fetch_user_data():
 
         for todo in todo_list:
             task_info = {
-		    "task": todo.get("title"),
-		    "completed": todo.get("completed"),
-		    "username": user.get("username")
-	    }
+                    "task": todo.get("title"),
+                    "completed": todo.get("completed"),
+                    "username": user.get("username")
+                }
             data_to_export[user_id].append(task_info)
     return data_to_export
+
 
 if __name__ == "__main__":
     data_to_export = fetch_user_data()

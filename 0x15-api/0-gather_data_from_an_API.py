@@ -20,7 +20,8 @@ if __name__ == "__main__":
             complete_response.append(todo.get("title"))
 
     print("Employee {} is done with tasks({}/{}):".format(user.get("name"),
-                                            len(complete_response), len(todos)))
+                                                    len(complete_response),
+                                                                len(todos)))
 
     for response in complete_response:
         print("\t {}".format(response))

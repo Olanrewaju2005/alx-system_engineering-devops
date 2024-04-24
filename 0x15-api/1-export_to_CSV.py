@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+importation of important modules
+"""
 import csv
 import requests
 import sys

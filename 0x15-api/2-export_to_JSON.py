@@ -19,10 +19,10 @@ if __name__ == "__main__":
 
     for todo in todos:
         task_info = {
-		    "task": todo.get("title"),
-		    "completed": todo.get("completed"),
-		    "username": username
-		    }
+                    "task": todo.get("title"),
+                    "completed": todo.get("completed"),
+                    "username": username
+            }
         data_to_export[user_id].append(task_info)
 
     with open("{}.json".format(user_id), "w") as jsonfile:

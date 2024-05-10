@@ -4,6 +4,7 @@ import important modules
 """
 import requests
 
+
 def top_ten(subreddit):
     """
     print the titles of the top ten hottest posts on a given subreddit

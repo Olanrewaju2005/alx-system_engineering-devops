@@ -5,6 +5,7 @@ Function to count words in all hot posts of a given subreddit
 import requests
 import sys
 
+
 def count_words(subreddit, word_list, after=None, counts={}):
     """
     recursive function that Reddit API, parses the title of all
@@ -39,14 +40,15 @@ def count_words(subreddit, word_list, after=None, counts={}):
 
         for word in word_list:
             if word.lower() in title:
-                counts[word] =  counts.get(word, 0) + title.count(word.lower())
+                counts[word] = counts.get(word, 0) + title.count(word.lower())
 
     after = main_data.get('data', {}).get('after')
 
-    if  after:
+    if after:
         count_words(subreddit, word_list, after, counts)
     else:
-        sorted_counts = sorted(counts.items(), key=lambda x: (-x[1], x[0].lower()))
+        sorted_counts = sorted(counts.items(),
+                               key=lambda x: (-x[1], x[0].lower()))
 
         for word, count in sorted_counts:
             print(f"{word.lower()}: {count}")

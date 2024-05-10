@@ -3,7 +3,6 @@
 100-main
 """
 import sys
-from ../100-count.py import count_words
 
 if __name__ == '__main__':
     count_words = __import__('100-count').count_words

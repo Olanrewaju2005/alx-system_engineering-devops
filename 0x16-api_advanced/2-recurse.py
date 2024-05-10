@@ -4,10 +4,11 @@ function to query a list of all hot posts on a given reddit subreddit
 """
 import requests
 
-def recurse(subredditm hot_list=[], after="", count=0):
+def recurse(subreddit, hot_list=[], after="", count=0):
     """
     returns a list of titles of all hot posts on a given subreddit
     """
+    url = f"https://www.reddit.com/r/{subreddit}/hot/.json"
     headers = {"User-Agent": "linux:0x16.api.advanced:v1.0.0"}
     params = {
         "after": after,

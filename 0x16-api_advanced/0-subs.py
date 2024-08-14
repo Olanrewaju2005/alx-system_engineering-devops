@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""
+import important modules
+"""
+import requests
 
 
 def number_of_subscribers(subreddit):
